@@ -1,7 +1,7 @@
-// A convenience gate for invited playtesters. This is a public static site;
-// the installer URL and this digest can be read from its source.
+// A convenience gate for invited playtesters. The installer remains a public
+// release asset; encoding only keeps its URL out of a quick source search.
 const accessCodeDigest = '7e5cac06a569125b647d13a975e42c9396f206a5e3c0792dcbfbd71d90420fee';
-const installerUrl = 'https://github.com/BeingPythonic/spareboots-release-alpha/releases/download/installer/TambleSetup.exe';
+const encodedInstallerUrl = 'aHR0cHM6Ly9naXRodWIuY29tL0JlaW5nUHl0aG9uaWMvc3BhcmVib290cy1yZWxlYXNlLWFscGhhL3JlbGVhc2VzL2Rvd25sb2FkL2luc3RhbGxlci9UYW1ibGVTZXR1cC5leGU=';
 
 const form = document.querySelector('.access-form');
 const message = document.querySelector('#form-message');
@@ -21,7 +21,7 @@ form.addEventListener('submit', async (event) => {
     const hex = [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
 
     if (hex === accessCodeDigest) {
-      window.location.assign(installerUrl);
+      window.location.assign(atob(encodedInstallerUrl));
       return;
     }
 
