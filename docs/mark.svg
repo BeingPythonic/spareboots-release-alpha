@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <!-- The Paper Arcane studio mark. tools/branding/render-branding.py renders the PNG the
+       client loads; change both together. -->
+  <circle cx="80" cy="80" r="72" fill="none" stroke="#8c8578" stroke-width="1.5"/>
+  <circle cx="80" cy="80" r="62" fill="none" stroke="#8c8578" stroke-width="1" stroke-dasharray="2 6"/>
+  <polyline points="116,44 152,80 80,152 8,80 44,44" fill="none" stroke="#1d1b2e" stroke-width="3" stroke-linejoin="miter"/>
+  <line x1="44" y1="44" x2="116" y2="44" stroke="#1d1b2e" stroke-width="3"/>
+  <polygon points="44,44 116,44 80,80" fill="#1d1b2e"/>
+  <circle cx="80" cy="112" r="9" fill="#a8402c"/>
+</svg>
